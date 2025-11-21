@@ -1,0 +1,37 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:#f7f5f4; color:#1f2937; }
+
+/* Centered container with 9:16 aspect ratio */
+#root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.aspect-9-16 {
+  position: relative;
+  width: min(100%, 720px);
+  /* maintain 9:16 */
+  aspect-ratio: 9 / 16;
+  background: linear-gradient(180deg, #fff9f6 0%, #f3f0ed 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.canvas-root {
+  position: absolute;
+  inset: 0;
+}
+
+.small-note {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  opacity: 0.6;
+}
